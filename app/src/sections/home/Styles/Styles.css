@@ -1,0 +1,50 @@
+html {
+    scroll-snap-type: y ;
+  }
+  
+  body {
+  
+  }
+  
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 0;
+    color: white;
+    left: calc(50% + 130px);
+    font-size: 50px;
+    font-family: sofia-pro, sans-serif;
+    font-style: normal;
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: absolute;
+  }
+  
+  img {
+    width: 450px;
+    height: auto;
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    perspective: 500px;
+  }
+  
+  section > div {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    max-height: 90vh;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
