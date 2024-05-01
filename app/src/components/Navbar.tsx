@@ -34,13 +34,13 @@ const Navbar = () => {
 
     ]
   return (
-    <div className='flex sticky z-10 top-0 w-full py-4 px-20 justify-between items-center bg-[#0B0B0B] text-white '>
+    <div className='flex fixed z-10 top-0 w-full py-4 px-20 justify-between items-center bg-[#0B0B0B] text-white '>
         <Image src={Logo} alt='Catalyst Logo' width={45} height={45} className='object-cover'/>
         <div className=' gap-12 hidden lg:flex '>
          {
             links.map((link,index)=>{
                 return (
-                    <Link href={link.path} className={`${spaceGrotesk.className} md:text-base lg:text- font-normal text-center `}>{link.page}</Link>
+                    <Link href={link.path} className={`${spaceGrotesk.className} md:text-base  font-light hover:font-normal transition-all duration-200 ease-in-out text-center `}>{link.page}</Link>
                 )
             })
          }

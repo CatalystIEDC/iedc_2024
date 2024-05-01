@@ -1,6 +1,5 @@
 import React from 'react'
 import { spaceGrotesk } from '../utils/fonts'
-import { Space_Grotesk } from 'next/font/google'
 import Image from 'next/image'
 
 const Footer = () => {
