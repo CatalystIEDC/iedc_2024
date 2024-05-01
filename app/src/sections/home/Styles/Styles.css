@@ -2,9 +2,7 @@ html {
     scroll-snap-type: y ;
   }
   
-  body {
-  
-  }
+
   
   .App {
     font-family: sans-serif;
@@ -23,11 +21,7 @@ html {
     position: absolute;
   }
   
-  img {
-    width: 450px;
-    height: auto;
-  }
-  
+ 
   section {
     height: 100vh;
     display: flex;

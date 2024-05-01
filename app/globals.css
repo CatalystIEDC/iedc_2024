@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 
-
-.event-banner {
- 
-  background-image : linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 49.09%, rgba(153, 153, 153, 0.04) 98.61%);
-}
-
 .event-details {
   position: absolute;
   white-space: nowrap;
