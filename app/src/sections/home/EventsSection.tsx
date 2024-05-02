@@ -3,24 +3,9 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import "../home/Styles/Styles.css"
+import EventCard from "../../components/EventCard";
+import {events} from '@/app/src/utils/events'
 
-const data = [
-  {
-    id: 1,
-    text: "Event 1",
-    url: "/event1.png",
-  },
-  {
-    id: 2,
-    text: "Event 2",
-    url: "/event1.png",
-  },
-  {
-    id: 3,
-    text: "Event 3",
-    url: "/event1.png",
-  },
-];
 
 function Images({ text, url }: any) {
   const ref = useRef(null);
@@ -41,12 +26,13 @@ function Images({ text, url }: any) {
 
 export default function EventsSection() {
   return (
-    <>
-      <div className="">
+    <div className="bg-red-500  w-screen h-screen flex justify-center items-center">
+      {/* <div className="">
         {data.map((event) => (
           <Images  key={event.id} text={event.text} url={event.url} />
         ))}
-      </div>
-    </>
+      </div> */}
+      <EventCard eventName={events[0].eventName} imgSrc={events[0].imgSrc} type={events[0].type}/>
+    </div>
   );
 }
