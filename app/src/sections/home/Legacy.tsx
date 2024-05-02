@@ -4,7 +4,7 @@ import { spaceGrotesk } from "../../utils/fonts";
 
 const Legacy = () => {
   return (
-    <div className="w-screen h-screen flex justify-center p-7 overflow-hidden bg-[#0B0B0B] items-center relative">
+    <div className="gradient-border-top w-screen h-screen flex justify-center p-7 overflow-hidden bg-[#0B0B0B] items-center relative">
       <div className="absolute  left-0">
         <Image
           src="/toplines.svg"

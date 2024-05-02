@@ -40,7 +40,7 @@ const Navbar = () => {
          {
             links.map((link,index)=>{
                 return (
-                    <Link href={link.path} className={`${spaceGrotesk.className} md:text-base  font-light hover:font-normal transition-all duration-200 ease-in-out text-center `}>{link.page}</Link>
+                    <Link key={index} href={link.path} className={`${spaceGrotesk.className} md:text-base  font-light hover:font-normal transition-all duration-200 ease-in-out text-center `}>{link.page}</Link>
                 )
             })
          }
