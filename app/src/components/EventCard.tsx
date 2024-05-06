@@ -18,7 +18,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, imgSrc, type }) => {
         router.push(`/events/${eventName}`);
       };
   return (
-    <div onClick={handleClick} className=" cursor-pointer w-[500px] h-[350px] relative overflow-hidden rounded-md border border-white ">
+    <div onClick={handleClick} className=" cursor-pointer w-[180px] h-[150px] lg:w-[500px] lg:h-[350px] md:w-[220px] md:h-[220px] relative overflow-hidden rounded-md border border-white ">
       <div className="absolute z-10 ">
         {" "}
         <svg
@@ -49,7 +49,9 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, imgSrc, type }) => {
           </defs>
         </svg>
       </div>
+      <div className="hover:snap-y snap-mandatory perspect">
 
+      </div>
       <Image
         alt={eventName}
         src={imgSrc}
@@ -59,7 +61,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, imgSrc, type }) => {
       />
       <div className="flex flex-col items-start absolute bottom-5 left-5 gap-[2px] z-20">
         <span
-          className={`${spaceGrotesk.className} text-white tracking-[-2.3px] font-normal text-4xl`}
+          className={`${spaceGrotesk.className} text-white tracking-[-2.3px] font-normal text-2xl lg:text-4xl`}
         >
           {eventName}
         </span>
