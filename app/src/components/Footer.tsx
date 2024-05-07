@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-      <div className='w-screen flex flex-col bg-[#0B0B0B] text-white pt-[86px] pb-10   px-20 gap-5 '>
+      <div className='w-screen footer-gradient-2 flex  flex-col bg-[#0B0B0B] text-white pt-[86px] pb-10   px-20 gap-5 '>
         <div className='flex flex-row  justify-end  gap-7'>
           <div className='flex flex-col justify-center  gap-2'>
             <p className={`text-sm ${spaceGrotesk.className}`}>Home</p>

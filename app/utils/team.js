@@ -1,4 +1,4 @@
-const team ={
+ const teams ={
   
         "executive": [
             {
@@ -244,3 +244,4 @@ const team ={
         ]
     }
 
+export default teams;
