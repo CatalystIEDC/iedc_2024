@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '@/public/Logo/Header logo.svg'
+import Logo from '@/public/logo/Headerlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 

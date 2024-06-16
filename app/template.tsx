@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation"
 import { useEffect } from "react";
 import { animateLogoIn, animatePageIn } from "../app/src/utils/loadings";
 import Image from "next/image";
-import Logo from '@/public/Logo/Header logo.svg'
+import Logo from '@/public/logo/Headerlogo.svg'
 
 
 export default function Template({ children }:{children:React.ReactNode}) {
