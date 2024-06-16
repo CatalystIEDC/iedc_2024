@@ -61,7 +61,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName, imgSrc, type }) => {
       />
       <div className="flex flex-col items-start absolute bottom-5 left-5 gap-[2px] z-20">
         <span
-          className={`${spaceGrotesk.className} text-white tracking-[-2.3px] font-normal text-2xl lg:text-4xl`}
+          className={` text-white tracking-[-2.3px] font-normal text-2xl lg:text-4xl`}
         >
           {eventName}
         </span>

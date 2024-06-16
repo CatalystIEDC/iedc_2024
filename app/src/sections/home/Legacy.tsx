@@ -4,7 +4,7 @@ import { spaceGrotesk } from "../../utils/fonts";
 
 const Legacy = () => {
   return (
-    <div className="gradient-border-top w-screen h-screen flex justify-center p-7 overflow-hidden bg-[#0B0B0B] items-center relative">
+    <div className="gradient-border-top w-screen h-screen flex justify-center p-7 overflow-hidden  items-center relative">
       <div className="absolute  left-0">
         <Image
           src="/toplines.svg"
@@ -15,11 +15,11 @@ const Legacy = () => {
         />
       </div>
       <div className="text-center">
-        <p className={`text-2xl ${spaceGrotesk.className}`}>Building a</p>
-        <p className={`text-6xl ${spaceGrotesk.className} font-bold text-white`}>
+        <p className={`text-2xl `}>Building a</p>
+        <p className={`text-6xl  font-bold text-white`}>
           Legacy of Innovation and
         </p>
-        <p className={`text-6xl ${spaceGrotesk.className} font-bold text-white` }>Entrepreneurship</p>
+        <p className={`text-6xl  font-bold text-white` }>Entrepreneurship</p>
       </div>
       <div className="absolute mt-24 right-0">
         <Image

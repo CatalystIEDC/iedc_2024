@@ -11,7 +11,7 @@ import {events} from '@/app/src/utils/events'
 
 export default function EventsSection() {
   return (
-    <div className="bg-[#0B0B0B] w-screen h-screen snap-y snap-mandatory flex flex-col p-7 gap-10   justify-center items-center">
+    <div className=" w-screen h-screen snap-y snap-mandatory flex flex-col p-7 gap-10   justify-center items-center">
       {/* <div className="">
         {data.map((event) => (
           <Images  key={event.id} text={event.text} url={event.url} />

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "./src/components/Footer";
 import Navbar from "./src/components/Navbar";
 import EventBanner from "./src/components/EventBanner";
 
-const inter = Inter({ subsets: ["latin"] });
+const dm = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Catalyst IEDC",
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body className={` overflow-x-hidden`}>
+      <body className={`${dm.className} bg-[#010314] overflow-x-hidden`}>
       <Navbar/>
       <EventBanner event={currentEvent} />
       {children}

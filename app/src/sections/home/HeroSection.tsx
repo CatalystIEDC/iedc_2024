@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className={` ${spaceGrotesk.className} bg-[#0B0B0B] relative w-screen h-screen overflow-hidden`}
+      className={`   relative w-screen h-screen overflow-hidden`}
     >
       {/* <EventBanner event={currentEvent} /> */}
       <div className="flex flex-col gap-[22px] items-center justify-center  mx-auto mt-60">
