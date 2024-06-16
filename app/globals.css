@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 
+body::-webkit-scrollbar-thumb{
+  background-color: #07123F;
+  width: 0.5rem;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar{
+  background-color:#110c2c00;
+
+  
+  width: 0.3rem;
+}
 .event-details {
   position: absolute;
   white-space: nowrap;
