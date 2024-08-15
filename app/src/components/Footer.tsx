@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       
       </div>
-      <div className='  right-0'>
+      {/* <div className='  right-0'>
           <Image
             src="/footerlines.svg"
             width={900}
@@ -41,7 +41,7 @@ const Footer = () => {
             height={200}
             alt="footerlines "
           />
-        </div>
+        </div> */}
       
     
     </>

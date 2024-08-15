@@ -6,7 +6,7 @@ const dm = DM_Sans({ subsets: ["latin"] });
 
 const Legacy = () => {
   return (
-    <ScrollAnimationWrapper className="w-full ">
+  
 
       <div className={`gradient-border-top  text-white w-screen h-screen flex justify-center p-7 overflow-hidden  items-center relative ${dm.className}`}>
       <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='absolute z-0 pointer-events-none top-0 '></Image>
@@ -19,13 +19,15 @@ const Legacy = () => {
           alt="toplines"
         />
       </div>
-     
+      <ScrollAnimationWrapper className="z-20" >
       <div className="text-center text-6xl z-20 tracking-[-2.15px] flex flex-col items-center justify-center gap-1">
       <div className="text-3xl tracking-tight font-light">Building a </div>
+      <ScrollAnimationWrapper className="w-full text-center flex justify-center" >
        <p className="w-3/4"> Legacy of Innovation and Entrepeneurship</p>
+       </ScrollAnimationWrapper>
        <div className="text-white/80 text-3xl  font-light tracking-tighter"></div>
       </div>
-     
+      </ScrollAnimationWrapper>
       <div className="absolute mt-24 right-0">
         <Image
           src="/bottomlines.svg"
@@ -35,7 +37,7 @@ const Legacy = () => {
         />
       </div>
     </div>
-    </ScrollAnimationWrapper>
+   
   );
 };
 

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 import TeamMember from '../src/components/TeamMember';
@@ -56,7 +57,7 @@ const Page = () => {
   return (
     <div className={`text-white z-10 h-fit w-screen pt-36 px-12`}>
       <motion.div
-        className={`text-5xl mt-8 font-normal text-white w-fit h-fit`}
+        className={`text-5xl mt-8 font-normal text-white w-fit tracking-tighter h-fit`}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.8 }}
