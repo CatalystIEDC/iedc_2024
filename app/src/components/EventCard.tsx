@@ -20,11 +20,11 @@ const EventCard: React.FC<EventCardProps> = ({ eventName,shortDescription, imgSr
   return (
     <div 
       onClick={handleClick} 
-      className="cursor-pointer input-border p-5 flex flex-col size-full justify-between   max-w-xs aspect-square bg-[#171F6126] relative overflow-hidden rounded-lg shadow-lg"
+      className="cursor-pointer input-border p-6 max-h-96 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] relative overflow-hidden rounded-lg gap-4 shadow-lg"
     >
     <div className="flex flex-col gap-1">
     <h2 className="text-white text-2xl tracking-tight font-light ">{eventName}</h2>
-      <div className="text-white font-extralight">
+      <div className="text-white/60 leading-5 font-extralight">
           {shortDescription}
         </div>
     </div>
@@ -32,8 +32,9 @@ const EventCard: React.FC<EventCardProps> = ({ eventName,shortDescription, imgSr
       <Image
         alt={eventName}
         src={imgSrc}
-        layout="fill"
-        className="opacity-5 object-cover"
+       width={300}
+       height={300}
+        className="rounded-sm object-cover"
       />
       </div>
        

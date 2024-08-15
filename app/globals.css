@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 body::-webkit-scrollbar-thumb{
   background-color: #ffffff41;
   width: 0.5rem;
   border-radius: 10px;
+  
 }
 
 body::-webkit-scrollbar{

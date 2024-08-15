@@ -55,12 +55,7 @@ const HeroSection = () => {
   };
   return (
     <div className="w-screen h-fit -z-10 mt-32   overflow-hidden  flex flex-col items-center pt-20 px-8 relative">
-      <Image
-        src={"./elements/Gradient.svg"}
-        layout="fill"
-        alt="footer background"
-        className="absolute z-10  top-0 "
-      ></Image>
+   
       <div className="w-full rounded-3xl pt-20 bg-white relative overflow-hidden h-[600px] text-center   event-background mb-10">
         <div className="z-50">
           <h1 className=" md:text-4xl tracking-tighter  text-center font-medium text-black">
@@ -79,6 +74,12 @@ const HeroSection = () => {
           className=" absolute left-1/2 bottom-8 md:bottom-10 scale-[2] md:scale-125 -translate-x-1/2"
         ></Image>
       </div>
+      <Image
+        src={"./elements/Gradient.svg"}
+        layout="fill"
+        alt="footer background"
+        className="absolute z-10  top-0 "
+      ></Image>
     </div>
   );
 };
