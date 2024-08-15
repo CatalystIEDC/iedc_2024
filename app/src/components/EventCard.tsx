@@ -1,8 +1,6 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-import EventPill from "./EventPill";
-import { spaceGrotesk } from "../utils/fonts";
 import { useRouter } from "next/navigation";
 
 type EventCardProps = {
@@ -12,60 +10,31 @@ type EventCardProps = {
 };
 
 const EventCard: React.FC<EventCardProps> = ({ eventName, imgSrc, type }) => {
+  const router = useRouter();
+  
+  const handleClick = () => {
+    router.push(`/events/${eventName}`);
+  };
 
-    const router = useRouter();
-    const handleClick = () => {
-        router.push(`/events/${eventName}`);
-      };
   return (
-    <div onClick={handleClick} className=" cursor-pointer w-[180px] h-[150px] lg:w-[500px] lg:h-[350px] md:w-[220px] md:h-[220px] relative overflow-hidden rounded-md border border-white ">
-      <div className="absolute z-10 ">
-        {" "}
-        <svg
-          width="693"
-          height="449"
-          viewBox="0 0 693 449"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            width="730"
-            height="647"
-            transform="matrix(1 0 0 -1 0 483)"
-            fill="url(#paint0_linear_664_1065)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_664_1065"
-              x1="365"
-              y1="0"
-              x2="365"
-              y2="647"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#121111" />
-              <stop offset="1" stopColor="#737373" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <div className="hover:snap-y snap-mandatory perspect">
-
-      </div>
+    <div 
+      onClick={handleClick} 
+      className="cursor-pointer w-full max-w-sm aspect-[4/3] relative overflow-hidden rounded-lg shadow-lg"
+    >
       <Image
         alt={eventName}
         src={imgSrc}
-        width={100}
-        height={100}
-        className="w-full h-full object-cover absolute"
+        layout="fill"
+        objectFit="cover"
+        className="transition-transform duration-300 ease-in-out transform hover:scale-110"
       />
-      <div className="flex flex-col items-start absolute bottom-5 left-5 gap-[2px] z-20">
-        <span
-          className={` text-white tracking-[-2.3px] font-normal text-2xl lg:text-4xl`}
-        >
-          {eventName}
-        </span>
-        <EventPill type={type} />
+      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+      <div className="absolute bottom-4 left-4 right-4 flex flex-col items-start">
+        <h2 className="text-white text-2xl font-bold mb-2">{eventName}</h2>
+        <div className="flex space-x-2">
+          <span className="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">{type}</span>
+          <span className="bg-gray-600 text-white text-sm px-3 py-1 rounded-full">Upcoming</span>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,24 @@
- const teams ={
+ 
+interface TeamMember {
+
+    name: string;
+  
+    designation: string;
+  
+  }
+  
+  
+  
+  interface Teams {
+  
+    [key: string]: TeamMember[];
+  
+  }
+  
+  
+  
+ 
+ const teams : Teams  ={
   
         "executive": [
             {

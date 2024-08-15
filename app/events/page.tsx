@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import EventCard from "../src/components/EventCard";
 import {events} from "@/app/src/utils/events"
+import ParallaxText from "../src/components/ParallaxText";
 
 const page = () => {
   return (
-    <div className="  flex flex-col pt-36 h-screen">
+    <div className="  flex flex-col w-full pt-36 h-full">
       <div className="flex ml-5   flex-row w-full">
         <p className={` text-white  text-4xl`}>
           Events
@@ -33,7 +34,8 @@ const page = () => {
           Past
         </button>
       </div>
-      <div className="grid  mt-3 md:gap-7 grid-cols-3 gap-3 p-5 overflow-y-auto  overflow-hidden justify-center" >
+      <ParallaxText baseVelocity={100} children={'Events'}/>
+      <div className="flex  flex-wrap mt-3 md:gap-7 gap-3 p-5   overflow-hidden justify-center" >
       <EventCard eventName={events[0].eventName} imgSrc={events[0].imgSrc} type={events[0].type}/> 
       <EventCard eventName={events[0].eventName} imgSrc={events[0].imgSrc} type={events[0].type}/> 
       <EventCard eventName={events[0].eventName} imgSrc={events[0].imgSrc} type={events[0].type}/> 

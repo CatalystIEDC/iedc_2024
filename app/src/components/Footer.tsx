@@ -10,8 +10,8 @@ const Footer = () => {
       <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='absolute  bottom-0 -z-10 '></Image>
         <div className='flex  flex-row z-20 justify-between gap-24 '>
           <Image src={'./logo/Headerlogo.svg'} width={150} height={150} alt='logo' className='object-cover'></Image>
-         <div className='flex  gap-24'>
-         <div className='flex flex-col text-base font-light justify-center  gap-2'>
+         <div className='flex  gap-24 items-start'>
+         <div className='flex flex-col text-base font-light justify-start  gap-2'>
             <Link href={'/'}>Home</Link>
             <Link href={'/events'}>Events</Link>
             <Link href={'/team'}>Team</Link> 

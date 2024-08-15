@@ -1,110 +1,100 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import TeamMember from '../src/components/TeamMember';
 import teams from '@/app/utils/team';
 
-
 const Page = () => {
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
+  const renderTeamSection = (title : string, teamKey:string) => (
+    <>
+      <motion.div
+        className={`text-4xl mt-8 font-normal text-white w-fit h-fit`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.8 }}
+        variants={titleVariants}
+      >
+        {title}
+      </motion.div>
+      <motion.div
+        className='w-full flex gap-16 my-10 flex-wrap'
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={containerVariants}
+      >
+        {teams[teamKey].map((member:any, index:any) => {
+          const nameForImage = member.name.split(" ").join("");
+          return (
+            <motion.div key={index} variants={itemVariants}>
+              <TeamMember
+                name={member.name}
+                designation={member.designation}
+                imageURL={`/team/${nameForImage}.png`}
+              />
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </>
+  );
+
   return (
-    <div className={`text-white z-10  h-fit w-screen pt-36 px-12 `}>
-      <div className={` text-5xl mt-8 font-normal text-white w-fit h-fit`}>Core Team</div>
-     <div className=' w-full flex gap-16 my-16 flex-wrap'>
-     
-     {teams['executive'].map((member, index) => {
+    <div className={`text-white z-10 h-fit w-screen pt-36 px-12`}>
+      <motion.div
+        className={`text-5xl mt-8 font-normal text-white w-fit h-fit`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.8 }}
+        variants={titleVariants}
+      >
+        Core Team
+      </motion.div>
+      <motion.div
+        className='w-full flex gap-16 my-16 flex-wrap'
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={containerVariants}
+      >
+        {teams['executive'].map((member, index) => {
           const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
+          return (
+            <motion.div key={index} variants={itemVariants}>
+              <TeamMember
+                name={member.name}
+                designation={member.designation}
+                imageURL={`/team/${nameForImage}.png`}
+              />
+            </motion.div>
+          );
         })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Operations Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['operations'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Skill Development Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['skills'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Tech Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['tech'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Marketing Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['marketing'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Creative Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['creative'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Finance Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['finance'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Vibe Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['vibe'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>IIC Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['iic'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>MuLearn Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['mulearn'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
-     <div className={` text-4xl mt-8 font-normal text-white w-fit h-fit`}>Tribe Team</div>
-     <div className=' w-full flex gap-16 my-10 flex-wrap'>
-     
-     {teams['tribe'].map((member, index) => {
-          const nameForImage = member.name.split(" ").join("");
-          return <TeamMember name={member.name} designation={member.designation} key={index} imageURL={`/team/${nameForImage}.png`} />;
-        })}
-      
-     </div>
+      </motion.div>
+
+      {renderTeamSection("Operations Team", "operations")}
+      {renderTeamSection("Skill Development Team", "skills")}
+      {renderTeamSection("Tech Team", "tech")}
+      {renderTeamSection("Marketing Team", "marketing")}
+      {renderTeamSection("Creative Team", "creative")}
+      {renderTeamSection("Finance Team", "finance")}
+      {renderTeamSection("Vibe Team", "vibe")}
+      {renderTeamSection("IIC Team", "iic")}
+      {renderTeamSection("MuLearn Team", "mulearn")}
+      {renderTeamSection("Tribe Team", "tribe")}
     </div>
   );
 };

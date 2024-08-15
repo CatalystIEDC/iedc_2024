@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./src/components/Footer";
 import Navbar from "./src/components/Navbar";
 import EventBanner from "./src/components/EventBanner";
+import InitialLoader from "./src/sections/InitialLoader";
 
 const dm = DM_Sans({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
      
       <body className={`${dm.className} bg-[#010314] overflow-x-hidden`}>
+        <InitialLoader/>
       <Navbar/>
       <EventBanner event={currentEvent} />
       {children}
