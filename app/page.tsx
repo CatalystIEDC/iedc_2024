@@ -10,6 +10,7 @@ import ContentWrapper from "./src/sections/ContentWrapper";
 import NewsLetter from "./src/components/NewsLetter";
 import ParallaxText from "./src/components/ParallaxText";
 import Lenis from "lenis";
+import HeroSection2 from "./src/sections/home/HeroSection2";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();

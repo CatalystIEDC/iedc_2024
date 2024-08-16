@@ -35,8 +35,9 @@ const Navbar = () => {
     ]
     
   return (
-    <div className='flex fixed z-[100] top-0 w-full py-4 px-14 justify-between  bg-[#010314]  items-center  text-white '>
+    <div className='flex fixed z-[100] top-0 w-full py-4 overflow-hidden px-14 justify-between   bg-[#010314] backdrop-blur-2xl  items-center  text-white '>
         <Image src={Logo} alt='Catalyst Logo' width={45} height={45} className='object-cover'/>
+        <Image src={'./elements/Gradient.svg'} width={3000} height={300}  alt='footer background' className='absolute -z-10 pointer-events-none top-0 left-0 '></Image>
         <div className=' gap-12 hidden lg:flex '>
          {
             links.map((link,index)=>{

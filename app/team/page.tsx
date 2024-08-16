@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import TeamMember from '../src/components/TeamMember';
 import teams from '@/app/utils/team';
+import Image from 'next/image';
 
 const Page = () => {
   const titleVariants = {
@@ -55,7 +56,8 @@ const Page = () => {
   );
 
   return (
-    <div className={`text-white themed-background z-10 h-fit w-screen pt-36 px-12`}>
+    <div className={`text-white themed-background relative z-10 h-fit w-screen pt-36 px-12`}>
+         {/* <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='fixed -z-10  pointer-events-none top-0 opacity-50  '></Image> */}
       <motion.div
         className={`text-5xl mt-8 font-normal text-white w-fit tracking-tighter h-fit`}
         initial="hidden"
@@ -96,6 +98,7 @@ const Page = () => {
       {renderTeamSection("IIC Team", "iic")}
       {renderTeamSection("MuLearn Team", "mulearn")}
       {renderTeamSection("Tribe Team", "tribe")}
+     
     </div>
   );
 };

@@ -116,6 +116,7 @@ html.lenis, html.lenis body {
 }
 .themed-background {
   background-image: url("/bg_grid.png");
+  /* opacity: 50%; */
 }
 .parallax .scroller {
   font-weight: 600;

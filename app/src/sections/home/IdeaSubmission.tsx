@@ -6,16 +6,17 @@ import ScrollAnimationWrapper from "../ScrollAnimationWrapper";
 
 const IdeaSubmission = () => {
   return (
-    <ScrollAnimationWrapper className="w-screeen">
+    <ScrollAnimationWrapper className="w-screeen relative gradient-border-top">
+       <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className=' absolute rotate-180 opacity-40 -z-10  pointer-events-none top-0   '></Image>
     <div className="  w-screen text-white flex gap-0   items-center justify-between h-screen px-14 py-32">
       <div className="flex flex-col  gap-12 justify-start items-start">
         <div className="flex flex-col gap-5 w-3/4">
           <h1 className="text-6xl  tracking-tighter">
             Empowering the Future Through Technology
           </h1>
-          <p className=" text-xl opacity-55 font-light tracking-tight">
+          <p className=" text-2xl font-extralight  tracking-tight">
             At Catalyst, we believe in the power of technology and innovation to
-            shape the world we live in. Join us in the mission to discover new prodigies and incubate them into entrepeneurship.
+            shape the world we live in. Join us in the mission to <span className="text-underline font-normal">discover new prodigies</span> and incubate them into <span className="font-normal text-underline">entrepeneurship</span>.
           </p>
         </div>
         <div className=" w-full md:w-4/5 py-8  gap-8 flex">
