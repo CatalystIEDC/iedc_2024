@@ -1,5 +1,5 @@
 import React from 'react'
-import { spaceGrotesk } from '../utils/fonts'
+
 
 const EventPill = ({type}:{type:string}) => {
   return (

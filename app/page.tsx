@@ -16,7 +16,9 @@ export default function Home() {
       <Legacy/>
       <IdeaSubmission/>
       <EventsSection/>
-      <ParallaxText baseVelocity={15  } children={"Catalyst IEDC"}/>
+      <ParallaxText baseVelocity={15}>
+        Catalyst IEDC
+        </ParallaxText>  
       <TeamSection/>
      
       <NewsLetter/>
