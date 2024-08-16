@@ -23,7 +23,7 @@ export default function EventsSection() {
     </div>
    </div>
     <p className=" text-2xl font-extralight  tracking-tightmt-12 ">
-    Catalyst is a hub of activity, where ideas are sparked and brought to life. Our events calendar is packed with opportunities for students to learn, collaborate, and grow.  We believe that <span className="text-underline font-normal">learning shouldn't be confined</span> to the classroom. Our events offer a unique learning experience that goes beyond textbooks.
+    Catalyst is a hub of activity, where ideas are sparked and brought to life. Our events calendar is packed with opportunities for students to learn, collaborate, and grow.  We believe that <span className="text-underline font-normal">learning shouldn&apos;t be confined</span> to the classroom. Our events offer a unique learning experience that goes beyond textbooks.
     </p>
     <p className=" text-2xl font-extralight  tracking-tightmt-12 ">
     Our events are designed to cater to a wide range of interests, from <span className="text-underline font-normal">technical workshops to entrepreneurial bootcamps.</span> We believe in creating a platform for students to <span className="text-underline font-normal">explore their passions and develop their skills.</span>
@@ -31,14 +31,6 @@ export default function EventsSection() {
     
    
 
-          {/* <p className=" text-2xl font-extralight  tracking-tight">
-          We operate on the principle of <span className='text-underline font-normal'> collaborative learning</span> and <span className='text-underline font-normal'> mutual growth.</span> Our team is a melting pot of diverse talents, from technical experts to creative visionaries. We work together to <span className='text-underline font-normal'>create a supportive environment</span> where ideas are nurtured, challenges are embraced, and solutions are co-created.
-          </p>
-
-          <p className=" text-2xl font-extralight  tracking-tight mb-24">
-          We are proud of the impact we have made on our campus and the community. Our team has successfully launched multiple startups, participated in numerous hackathons and competitions, and developed innovative solutions to <span className='text-underline font-normal'>real-world problems.</span> We are committed to creating a <span className='text-underline font-normal'>positive and lasting impact</span> on society through our work.
-          </p> */}
-    
       </div>
 
       <div className="  w-screen   flex   gap-10   mt-12 items-center">
