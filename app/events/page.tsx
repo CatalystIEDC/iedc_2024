@@ -42,7 +42,7 @@ const Page = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className={`${dm.className} flex flex-col gap-5 overflow-hidden pl-12 w-full pt-40 mb-24 h-full`}
+      className={`${dm.className} flex flex-col gap-5  min-h-[100vh] overflow-hidden pl-12 w-full pt-40 mb-24 h-full`}
     >
       <motion.div variants={itemVariants}>
       <h1 className="text-white font-normal tracking-tighter text-5xl">Events</h1>
@@ -74,7 +74,7 @@ const Page = () => {
       </motion.div>
       <motion.div
         variants={containerVariants}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
       >
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
@@ -83,7 +83,7 @@ const Page = () => {
             </motion.div>
           ))
         ) : (
-          <motion.p variants={itemVariants} className="col-span-full text-center text-xl">
+          <motion.p variants={itemVariants} className="col-span-full font-light tracking-tighter text-white  text-4xl">
             No Events as such at present. Maybe in future..
           </motion.p>
         )}

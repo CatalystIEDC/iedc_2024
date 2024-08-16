@@ -10,7 +10,7 @@ import {
   useVelocity,
   useAnimationFrame
 } from "framer-motion";
-// import { wrap } from "@motionone/utils";
+import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
   children: string;
@@ -24,14 +24,17 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 500
+    damping: 100,
+    stiffness: 200
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false
   });
-  const x = useTransform(baseX, (v) => `${( -45)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(20, -35, v)}%`);
 
+  // const x = useTransform(baseX, (v) => v, {
+  //   clamp: [-window.innerWidth, window.innerWidth]
+  // });
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
@@ -46,10 +49,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     baseX.set(baseX.get() + moveBy);
   });
   return (
-    <div className="parallax text-[#0a0a0a] ">
-      <motion.div className="scroller " 
-    style={{ x }}
-      >
+    <div className="parallax text-[#010314] tracking-[-1rem] ">
+      <motion.div className="scroller " style={{ x }}>
         <span >{children} </span>
         <span >{children} </span>
         <span >{children} </span>
@@ -58,6 +59,12 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         <span >{children} </span>
         <span >{children} </span>
         <span >{children} </span>
+        <span >{children} </span>
+
+        <span >{children} </span>
+        <span >{children} </span>
+        <span >{children} </span>
+
       </motion.div>
     </div>
   );

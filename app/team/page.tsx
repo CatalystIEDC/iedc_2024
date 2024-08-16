@@ -55,7 +55,7 @@ const Page = () => {
   );
 
   return (
-    <div className={`text-white z-10 h-fit w-screen pt-36 px-12`}>
+    <div className={`text-white themed-background z-10 h-fit w-screen pt-36 px-12`}>
       <motion.div
         className={`text-5xl mt-8 font-normal text-white w-fit tracking-tighter h-fit`}
         initial="hidden"

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { spaceGrotesk } from '../utils/fonts'
+
 import Link from 'next/link'
 const Button = ({text,href}:{text:string,href:string}) => {
   return (

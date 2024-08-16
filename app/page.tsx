@@ -6,6 +6,7 @@ import TeamSection from "./src/sections/home/TeamSection";
 import AboutSection from './src/sections/home/AboutSection'
 import ContentWrapper from "./src/sections/ContentWrapper"
 import NewsLetter from "./src/components/NewsLetter";
+import ParallaxText from "./src/components/ParallaxText";
 
 export default function Home() {
   return (
@@ -14,9 +15,11 @@ export default function Home() {
       <HeroSection/>
       <Legacy/>
       <IdeaSubmission/>
-      <TeamSection/>
       <EventsSection/>
-      {/* <NewsLetter/> */}
+      <ParallaxText baseVelocity={15  } children={"Catalyst IEDC"}/>
+      <TeamSection/>
+     
+      <NewsLetter/>
       <AboutSection/>
       
     </main>

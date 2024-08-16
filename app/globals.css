@@ -37,7 +37,7 @@ body::-webkit-scrollbar{
   border-width: 0.1px 0px;
   border-style: solid;
   border-image: linear-gradient(
-      to right,
+      to right ,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.07) 8%,
       rgba(255, 255, 255, 1) 51%,
@@ -55,11 +55,53 @@ body::-webkit-scrollbar{
   border-image: linear-gradient(to left, #ffffff00 0%, #ffffff12 8%, #ffffff 51%, #ffffff1b 74%, #ffffff00 100%) 1 ; 
 } */
 .newsletter {
-  border-radius: 17px;
-  background: linear-gradient(180deg, #3351ee 0%, rgba(1, 3, 20, 0.77) 120.38%);
+  /* border-radius: 17px; */
+  /* background: linear-gradient(180deg, #3351ee 0%, rgba(1, 3, 20, 0.77) 120.38%); */
   box-shadow: 0px 0px 300px 10px rgba(48, 77, 224, 0.074);
 }
 @keyframes marquee {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: -5px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 0px 5px 0px;
+  
+}
+.themed-background {
+  background-image: url("/bg_grid.png");
+}
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+@media screen and (max-width: 600px) {
+  .parallax .scroller {
+    font-size: 40px;
+  }
+  .para{
+    text-indent: 100px;
+  }
+  
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
 }
