@@ -33,6 +33,43 @@ body::-webkit-scrollbar{
     
 
 }
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.text-underline{
+
+    position: relative;
+
+  
+  
+}
+
+.text-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em; /* adjust the offset to control the height of the underline */
+  width: 100%;
+  height: 0.3em; /* adjust the thickness of the underline */
+  background-color: rgba(5, 88, 255, 0.49); /* adjust the color and opacity of the underline */
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 .input-border {
   border-width: 0.1px 0px;
   border-style: solid;

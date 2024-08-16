@@ -2,9 +2,11 @@ import React from "react";
 import Button from "../../components/Button";
 import Image from "next/image";
 import { SiEbox, SiHackthebox } from "react-icons/si";
+import ScrollAnimationWrapper from "../ScrollAnimationWrapper";
 
 const IdeaSubmission = () => {
   return (
+    <ScrollAnimationWrapper className="w-screeen">
     <div className="  w-screen text-white flex gap-0   items-center justify-between h-screen px-14 py-32">
       <div className="flex flex-col  gap-12 justify-start items-start">
         <div className="flex flex-col gap-5 w-3/4">
@@ -60,6 +62,7 @@ const IdeaSubmission = () => {
         />
       </div>
     </div>
+    </ScrollAnimationWrapper>
   );
 };
 
