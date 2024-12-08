@@ -49,7 +49,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     baseX.set(baseX.get() + moveBy);
   });
   return (
-    <div className="parallax text-[#010314] tracking-[-1rem] ">
+    <div className="parallax w-screen text-xl md:text-[64px] text-[#010314] tracking-[-1rem] ">
       <motion.div className="scroller " style={{ x }}>
         <span >{children} </span>
         <span >{children} </span>

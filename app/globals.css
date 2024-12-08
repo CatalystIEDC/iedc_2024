@@ -2,39 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   overflow-x: hidden;
   box-sizing: border-box;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: #ffffff41;
   width: 0.5rem;
   border-radius: 10px;
-  
 }
 
-body::-webkit-scrollbar{
-  background-color:#110c2c00;
+body::-webkit-scrollbar {
+  background-color: #110c2c00;
 
-  
   width: 0.3rem;
 }
 .event-details {
   position: absolute;
   white-space: nowrap;
-  animation: marquee 20s linear infinite; 
+  animation: marquee 20s linear infinite;
 }
-.gradient-border-top{
-
-    border-width: 0.2px 0px 0px 0px;
-    border-style: solid;
-    /* border-image: linear-gradient(to right, darkblue, darkorchid) 1; */
-    border-image: linear-gradient(to right, #ffffff00 0%, #ffffff12 8%, #ffffff 51%, #ffffff1b 74%, #ffffff00 100%) 1 ;
-    
-
+.gradient-border-top {
+  border-width: 0.2px 0px 0px 0px;
+  border-style: solid;
+  /* border-image: linear-gradient(to right, darkblue, darkorchid) 1; */
+  border-image: linear-gradient(
+      to right,
+      #ffffff00 0%,
+      #ffffff12 8%,
+      #ffffff 51%,
+      #ffffff1b 74%,
+      #ffffff00 100%
+    )
+    1;
 }
 
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -45,22 +49,23 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-.text-underline{
-
-    position: relative;
-
-  
-  
+.text-underline {
+  position: relative;
 }
 
 .text-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0.1em; /* adjust the offset to control the height of the underline */
   width: 100%;
   height: 0.3em; /* adjust the thickness of the underline */
-  background-color: rgba(5, 88, 255, 0.49); /* adjust the color and opacity of the underline */
+  background-color: rgba(
+    5,
+    88,
+    255,
+    0.49
+  ); /* adjust the color and opacity of the underline */
 }
 .lenis.lenis-stopped {
   overflow: hidden;
@@ -74,13 +79,14 @@ html.lenis, html.lenis body {
   border-width: 0.1px 0px;
   border-style: solid;
   border-image: linear-gradient(
-      to right ,
+      to right,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.07) 8%,
       rgba(255, 255, 255, 1) 51%,
       rgba(255, 255, 255, 0.11) 74%,
       rgba(255, 255, 255, 0) 100%
-  ) 1;
+    )
+    1;
 }
 
 /* 
@@ -97,8 +103,12 @@ html.lenis, html.lenis body {
   box-shadow: 0px 0px 300px 10px rgba(48, 77, 224, 0.074);
 }
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .parallax {
@@ -112,31 +122,34 @@ html.lenis, html.lenis body {
   flex-wrap: nowrap;
   background-color: rgb(255, 255, 255);
   padding: 5px 0px 5px 0px;
-  
+}
+.catalyst-text {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 23.7%, #999 385.19%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .themed-background {
   background-image: url("/bg_grid.png");
-  /* opacity: 50%; */
 }
 .parallax .scroller {
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 64px;
+  
   display: flex;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
-
 }
 
 @media screen and (max-width: 600px) {
   .parallax .scroller {
     font-size: 40px;
+    letter-spacing: -2px;
   }
-  .para{
+  .para {
     text-indent: 100px;
   }
-  
 }
 
 .parallax span {

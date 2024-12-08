@@ -56,8 +56,8 @@ const Page = () => {
   );
 
   return (
-    <div className={`text-white themed-background relative z-10 h-fit w-screen pt-36 px-12`}>
-         {/* <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='fixed -z-10  pointer-events-none top-0 opacity-50  '></Image> */}
+    <div className={`text-white themed-background relative h-fit w-screen pt-36 px-12`}>
+      <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='absolute top-0 rotate-180 pointer-events-none top-0 opacity-50 '></Image>
       <motion.div
         className={`text-5xl mt-8 font-normal text-white w-fit tracking-tighter h-fit`}
         initial="hidden"
