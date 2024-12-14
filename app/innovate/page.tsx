@@ -8,7 +8,7 @@ import { FlipWords } from "../src/utils/flip-words";
 
 
 const dm = DM_Sans({ subsets: ["latin"] });
-const page = () => {
+const Page = () => {
   const words = useMemo(() => ["innovative", "entrepreneurial", "visionary", "creative", "pioneering", "groundbreaking"], []);
   const containerVariants = {
    
@@ -44,4 +44,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

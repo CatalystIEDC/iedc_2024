@@ -129,7 +129,7 @@ const page = () => {
         </motion.div>
         <div className="flex items-center flex-wrap gap-5 lg:justify-between  w-full pr-12">
           {data.map((item, index) => (
-            <div className="cursor-pointer input-border p-6 min-h-52 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] h-56 relative overflow-hidden rounded-lg gap-4 shadow-lg">
+            <div key={index} className="cursor-pointer input-border p-6 min-h-52 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] h-56 relative overflow-hidden rounded-lg gap-4 shadow-lg">
               <h3 className=" text-white text-2xl font-normal mb-2">
                 {item.title}
               </h3>
@@ -151,7 +151,7 @@ const page = () => {
         >
           The collaboration between Catalyst IEDC and Mulearn significantly
           impacts students by equipping them with the skills necessary for
-          success in today's dynamic environment. Students emerge not only as
+          success in today&apos;s dynamic environment. Students emerge not only as
           graduates but as proactive individuals ready to tackle challenges with
           innovative solutions.
         </motion.p>
@@ -243,7 +243,7 @@ impressive 25800 Karma points</div>
 milestone on the Mulearn Campus Leaderboard, reaching 1 million karma points
 which was the second college in Kerala to do so after SJCET, Kottayam. This
 signifies excellence in education and research, due to active participation of
-MBCET Students in Mulearn's programs.</div>
+MBCET Students in Mulearn&apos;s programs.</div>
         </motion.div>
         <Image
         alt="Top Campus"

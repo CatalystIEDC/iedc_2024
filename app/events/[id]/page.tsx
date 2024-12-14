@@ -4,7 +4,7 @@ import { events } from "@/app/src/utils/events";
 import { fetchImages } from "@/app/utils/fetchimages";
 import Image from "next/image";
 
-const page = ({ params }: any) => {
+const Page = ({ params }: any) => {
   const [imgSrc, setImgSrc] = useState<string[]>([]);
   const eventName = decodeURIComponent(params.id);
   const filteredEvent = useMemo(() => {
@@ -32,15 +32,16 @@ const page = ({ params }: any) => {
           <div className="text-lg bg-blue-950 px-3 py-2 rounded-sm text-white">{filteredEvent?.year}</div>
         </div>
         <div className="w-screen flex flex-wrap items-center gap-5">
-          {imgSrc.map((src) => (
-            <img
-            key={src}
+          {imgSrc.map((src,index) => (
+            <Image
+            alt="event image"
+            key={index}
             src={src}
             width={300}
             height={300}
             className="object-cover rounded-lg"
             >
-            </img>
+            </Image>
           ))}
         </div>
         <div className="space-y-4">
@@ -55,4 +56,4 @@ const page = ({ params }: any) => {
   );
 };
 
-export default page;
+export default Page;

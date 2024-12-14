@@ -90,7 +90,7 @@ export default function EventsSection() {
           className="text-lg md:text-2xl font-extralight tracking-normal mt-12"
           variants={itemVariants}
         >
-          Catalyst is a hub of activity, where ideas are sparked and brought to life. Our events calendar is packed with opportunities for students to learn, collaborate, and grow. We believe that <span className="text-underline font-normal">learning shouldn't be confined</span> to the classroom. Our events offer a unique learning experience that goes beyond textbooks.
+          Catalyst is a hub of activity, where ideas are sparked and brought to life. Our events calendar is packed with opportunities for students to learn, collaborate, and grow. We believe that <span className="text-underline font-normal">learning shouldn&apos;t be confined</span> to the classroom. Our events offer a unique learning experience that goes beyond textbooks.
         </motion.p>
 
         <motion.p 
