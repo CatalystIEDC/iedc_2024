@@ -3,6 +3,11 @@ import React from "react";
 import {Canvas} from '@react-three/fiber';
 import LogoContainer from "../../components/LogoContainer";
 import {Environment, OrbitControls} from '@react-three/drei';
+import { DM_Sans,Darker_Grotesque } from "next/font/google";
+
+
+const dm = Darker_Grotesque({ subsets: ["latin"] });
+
 const HeroSection = () => {
  
 
@@ -10,10 +15,10 @@ const HeroSection = () => {
   return (
     <div className="w-screen h-[85vh]  mt-32   overflow-hidden  flex flex-col items-center  px-8 relative ">
   
-      <div className="uppercase mt-10 md:mt-5 font-semibold tracking-tighter text-white text-[12dvw] text-left md:text-[10dvw] lg:text-[5dvw] z-[50] md:leading-[100px] md:text-center">
+      <div  className={`uppercase mt-10 md:mt-5 font-semibold tracking-tighter text-white text-[12dvw] leading-10 text-center  md:text-[10dvw] lg:text-[5dvw] z-[50] md:leading-[100px] md:text-center ${dm.className}`}>
         Catalyst Mar Baselios IEDC
       </div>
-      <div className="text-white/80 md:text-white text-xl md:text-3xl z-[200] font-normal w-full  lg:font-light text-center mx-auto  lg:mt-0 mt-2 tracking-tight   md:w-3/4">
+      <div className="text-white/80 md:text-white text-xl md:text-3xl z-[100] font-normal w-full  lg:font-light text-center mx-auto  lg:mt-0 mt-2 tracking-tight   md:w-3/4">
             Where aspiring entrepreneurs become empowered innovators
           </div>
       <Image
