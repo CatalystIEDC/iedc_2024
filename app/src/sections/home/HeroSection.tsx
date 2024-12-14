@@ -10,10 +10,12 @@ const HeroSection = () => {
   return (
     <div className="w-screen h-[85vh]  mt-32   overflow-hidden  flex flex-col items-center  px-8 relative ">
   
-      {/* <div className="uppercase mt-10 md:mt-5 font-semibold tracking-tighter text-white text-[12dvw] text-left md:text-[5dvw] z-[50] md:leading-[150px] md:text-center">
+      <div className="uppercase mt-10 md:mt-5 font-semibold tracking-tighter text-white text-[12dvw] text-left md:text-[10dvw] lg:text-[5dvw] z-[50] md:leading-[100px] md:text-center">
         Catalyst Mar Baselios IEDC
       </div>
-      
+      <div className="text-white/80 md:text-white text-xl md:text-3xl z-[200] font-normal w-full  lg:font-light text-center mx-auto  lg:mt-0 mt-2 tracking-tight   md:w-3/4">
+            Where aspiring entrepreneurs become empowered innovators
+          </div>
       <Image
         src={"./elements/Gradient.svg"}
         layout="fill"
@@ -25,7 +27,7 @@ const HeroSection = () => {
       src={'/bg-main.png'}
       layout="fill"
         className="z-[5] opacity-20 object-cover"
-      /> */}
+      />
       
       {/* <div className="w-full rounded-lg z-[20] lg:pt-20 bg-transparent md:bg-white  relative md:overflow-hidden h-[65vh] lg:h-[60dvh] text-center   event-background mb-10">
         <div className="z-50">
@@ -45,8 +47,8 @@ const HeroSection = () => {
           className=" absolute left-1/2 bottom-8 md:bottom-10 scale-[4] md:scale-125 -translate-x-1/2"
         ></Image>
       </div> */}
-     <Canvas camera={{position:[0,-10,250],fov : 12}} >
-      <OrbitControls />
+     <Canvas camera={{position:[0,-55,110],fov : 5}} className="z-[100]" >
+      {/* <OrbitControls /> */}
       <Environment files={['https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/studio_small_09_4k.hdr']}/>
       {/* <mesh>
         <boxGeometry />

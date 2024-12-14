@@ -125,7 +125,7 @@ export default function EventsSection() {
           {/* Horizontal scrollable container */}
           <motion.div 
             ref={scrollContainerRef}
-            className="md:hidden flex overflow-x-scroll scrollbar-hide gap-6 pb-4 snap-x snap-mandatory"
+            className="md:hidden flex overflow-x-scroll scrollbar-hide gap-3 pb-4 snap-x snap-mandatory"
             style={{ 
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch'
@@ -134,7 +134,7 @@ export default function EventsSection() {
             {events.slice(-4).map((event, index) => (
               <div 
                 key={index} 
-                className="snap-center flex-shrink-0 w-[80vw] max-w-[350px]"
+                className="snap-center flex-shrink-0 w-[60vw] max-w-[350px]"
               >
                 <EventCard 
                   shortDescription={event.oneline_description} 
@@ -149,7 +149,7 @@ export default function EventsSection() {
           {/* Desktop grid layout */}
           <motion.div 
             // className="hidden md:flex gap-10 mt-12 items-center "
-             className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
+             className="hidden md:flex flex-wrap  lg:grid grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
             variants={{
               hidden: { opacity: 0 },
               visible: {

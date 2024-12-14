@@ -47,7 +47,7 @@ const AboutSection = () => {
   }
 
   return (
-    <div className="relative w-screen md:h-screen flex md:flex-row flex-col gap-10  md:gap-32 text-white md:px-14 px-8 py-14 md:py-32">
+    <div className="relative w-screen h-fit  flex lg:flex-row flex-col gap-10  md:gap-32 text-white md:px-14 px-8 py-14 md:py-32">
       <Image
         src={"./elements/Gradient.svg"}
         layout="fill"
@@ -62,7 +62,7 @@ const AboutSection = () => {
       />
 
       <motion.div 
-        className="flex flex-col gap-5 md:justify-between items-start md:w-3/5"
+        className="flex flex-col gap-5 md:justify-between items-start lg:w-3/5"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

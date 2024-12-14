@@ -38,48 +38,59 @@ const InitialLoader = () => {
     <motion.div
       initial={{ y: 0 }}
       animate={{
-     
-        y: isLoading ? 0 : '-100%'
+      y: isLoading ? 0 : '-100%'
       }}
       transition={{ duration: 1 }}
       onAnimationStart={handleAnimationStart}
       onAnimationComplete={handleAnimationComplete}
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-      
-        height: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: '#000', // or any color you prefer
-        zIndex: 9999
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: '#000', // or any color you prefer
+      zIndex: 9999
       }}
-      className='w-screen'
+      className='w-screen relative'
     >
       <div className='flex flex-col justify-center items-center gap-5'>
-        <motion.div
-          initial={{  y: 20, scale: 1.2 }}
-          animate={{  y: 0, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
-        >
-          <Image src={Logo} alt='Catalyst Logo' width={100} height={100} className='object-cover'/>
-        </motion.div>
-        
-        <motion.h1
-          initial={{  y: 20 }}
-          animate={{  y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-          style={{
-            color: '#fff',
-            fontSize: '3rem',
-            textAlign: 'center'
-          }}
-        >
-          Catalyst Mar Baselios IEDC
-        </motion.h1>
+      <motion.div
+        initial={{ y: 20, scale: 1.2 }}
+        animate={{ y: 0, scale: 1 }}
+        transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
+      >
+        <Image src={Logo} alt='Catalyst Logo' width={100} height={100} className='object-cover'/>
+      </motion.div>
+      
+      <motion.h1
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
+        style={{
+        color: '#fff',
+        fontSize: '3rem',
+        textAlign: 'center'
+        }}
+      >
+        Catalyst Mar Baselios IEDC
+      </motion.h1>
       </div>
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.1 }}
+      transition={{ duration: 1 }}
+      style={{ position: 'absolute', width: '100%', height: '100%' }}
+      >
+      <Image
+        alt="bg-main"
+        src={'/bg-main.png'}
+        layout="fill"
+        className="z-[5] object-cover"
+      />
+      </motion.div>
     </motion.div>
   );
 };

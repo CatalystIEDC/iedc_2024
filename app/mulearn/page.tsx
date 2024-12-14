@@ -127,7 +127,7 @@ const page = () => {
             Key Initiatives
           </h1>
         </motion.div>
-        <div className="flex items-center flex-wrap justify-between  w-full pr-12">
+        <div className="flex items-center flex-wrap gap-5 lg:justify-between  w-full pr-12">
           {data.map((item, index) => (
             <div className="cursor-pointer input-border p-6 min-h-52 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] h-56 relative overflow-hidden rounded-lg gap-4 shadow-lg">
               <h3 className=" text-white text-2xl font-normal mb-2">

@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm.className} bg-[#010314] overflow-x-hidden`}>
-        {/* <InitialLoader /> */}
+        <InitialLoader />
         <Navbar />
         <MiniNavbar/>
         <EventBanner event={currentEvent} />

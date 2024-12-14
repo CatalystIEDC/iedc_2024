@@ -25,13 +25,16 @@ const page = () => {
     initial="hidden"
     animate="visible"
     variants={containerVariants}
-    className={`${dm.className} flex flex-col items-center justify-center gap-5 relative font-extralight text-white  min-h-[100vh] overflow-hidden pl-12 w-full py-40 h-full`}
+    className={`${dm.className} flex flex-col items-start md:items-center justify-center gap-5 relative font-extralight text-white  min-h-[100vh] overflow-hidden pl-5 md:pl-12 w-full py-40 h-full`}
   >
      <Image src={'./elements/Gradient.svg'} layout='fill' alt='footer background' className='absolute -z-10 rotate-180 pointer-events-none top-0 opacity-50 '></Image>
      <motion.div className="z-20" variants={itemVariants}>
-      <h1 className="text-white font-light tracking-tight text-5xl">Something  <FlipWords words={words} />. Soon .</h1>
+      <h1 className="text-white font-light tracking-tight text-4xl md:text-5xl">Something  <FlipWords words={words} /></h1>
       </motion.div>
 
+      <motion.div className="z-20" variants={itemVariants}>
+      <h1 className="text-white text-left font-light tracking-tight text-4xl md:text-5xl">Soon.</h1>
+      </motion.div>
 
    
     

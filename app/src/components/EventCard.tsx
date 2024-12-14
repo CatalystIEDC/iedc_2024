@@ -19,7 +19,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventName,shortDescription, imgSr
   return (
     <div 
       onClick={handleClick} 
-      className="cursor-pointer border-[0.1px] border-opacity-5 input-border group p-6 max-h-96 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] relative overflow-hidden rounded-lg gap-4 shadow-lg"
+      className="cursor-pointer md:scale-100 scale-75 border-[0.1px] border-opacity-5 input-border group p-6 max-h-96 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] relative overflow-hidden rounded-lg gap-4 shadow-lg"
     >
     <div className="flex flex-col gap-1">
     <h2 className="text-white text-2xl tracking-tight font-light ">{eventName}</h2>

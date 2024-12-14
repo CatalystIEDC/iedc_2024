@@ -84,7 +84,7 @@ const Page = () => {
       </motion.div>
       <motion.div
         variants={containerVariants}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
+        className="flex flex-wrap justify-center  md:gap-8 mt-8"
       >
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (

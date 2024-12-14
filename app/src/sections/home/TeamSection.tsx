@@ -47,7 +47,7 @@ const TeamSection = () => {
         className='object-cover -z-10 opacity-[0.05]'
       />
       
-      <div className='w-screen px-8 py-14 md:px-14 md:py-32 md:h-screen z-10'>
+      <div className='w-screen px-8 py-14 md:px-14 md:py-32 md:h-fit z-10'>
   
           <motion.div 
             className="flex flex-col gap-3 lg:gap-5 md:justify-between items-start"

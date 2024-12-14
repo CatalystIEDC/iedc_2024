@@ -82,7 +82,7 @@ const page = () => {
     className="text-lg md:text-xl mb-12 font-extralight tracking-normal text-white"
     variants={itemVariants}
   >
-    IEDC envisions a community of innovators and entrepreneurs who transform their ideas into sustainable, impactful ventures. By fostering a culture of creativity, collaboration, and technical excellence, the center aspires to contribute to societal growth and technological advancements.
+    IEDC envisions a community of innovators and entrepreneurs who transform their ideas into <span className="text-underline">sustainable, impactful ventures</span>. By fostering a culture of creativity, collaboration, and technical excellence, the center aspires to contribute to <span className="text-underline">societal growth and technological advancements</span>.
   </motion.p>
 </div>
 
@@ -97,7 +97,7 @@ const page = () => {
     className="text-lg md:text-xl mb-12 font-extralight tracking-normal text-white"
     variants={itemVariants}
   >
-    Our mission encompasses multiple key dimensions. We aim to inspire creativity by encouraging students to think outside the box and pursue innovative ideas. We foster collaboration by providing a platform for multidisciplinary teamwork to tackle challenges effectively. Our goal is to enable transformation, supporting students in converting conceptual ideas into viable products or services through dedicated mentorship and comprehensive resources. Additionally, we are committed to promoting industry readiness by equipping students with entrepreneurial skills that will help them excel in competitive professional environments.
+    Our mission encompasses multiple key dimensions. We aim to inspire creativity by encouraging students to think outside the box and pursue innovative ideas. We foster collaboration by providing a platform for multidisciplinary teamwork to tackle challenges effectively. Our goal is to enable transformation, supporting students in converting conceptual ideas into <span className="text-underline">viable products</span> or services through dedicated mentorship and comprehensive resources. Additionally, we are committed to promoting industry readiness by equipping students with <span className="text-underline">entrepreneurial skills</span> that will help them excel in competitive professional environments.
   </motion.p>
 </div>
 
@@ -169,7 +169,8 @@ const page = () => {
     className="text-lg md:text-xl mb-12 font-extralight tracking-normal text-white"
     variants={itemVariants}
   >
-    Our mission encompasses multiple key dimensions. We aim to inspire creativity by encouraging students to think outside the box and pursue innovative ideas. We foster collaboration by providing a platform for multidisciplinary teamwork to tackle challenges effectively. Our goal is to enable transformation, supporting students in converting conceptual ideas into viable products or services through dedicated mentorship and comprehensive resources. Additionally, we are committed to promoting industry readiness by equipping students with entrepreneurial skills that will help them excel in competitive professional environments.
+    Over the years, Catalyst IEDC has made significant strides in promoting innovation and entrepreneurship among students. Some of our notable achievements include <span className="text-underline">launching successful startups,</span> winning prestigious competitions, and <span className="text-underline">
+    securing funding for innovative projects</span>. We have also established strong partnerships with industry leaders and government organizations to provide students with <span className="text-underline">valuable networking opportunities</span> and real-world experience. Our commitment to excellence and creativity has earned us recognition as a leading center for innovation in the region. 
   </motion.p>
       </div>
       {/* 
