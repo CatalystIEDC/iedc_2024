@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 const currentEvent = {
   name: "Hackathon",
   details:
-    "✦✦Catalyst IEDC is conducting a 3-day long Hackathon from 10th to 12th of September. Register now! ✦✦",
+    "✦✦RELEVENT ‘25 – Your Gateway to Leadership and Innovation! Register now! ✦✦",
+    link: 'https://www.instagram.com/p/DDQ_-xmyb_R/'
 };
 export default function RootLayout({
   children,
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm.className} bg-[#010314] overflow-x-hidden`}>
-        <InitialLoader />
+        {/* <InitialLoader /> */}
         <Navbar />
         <MiniNavbar/>
         <EventBanner event={currentEvent} />

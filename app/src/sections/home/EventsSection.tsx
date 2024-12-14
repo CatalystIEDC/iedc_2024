@@ -12,26 +12,26 @@ export default function EventsSection() {
   const [isAtEnd, setIsAtEnd] = useState(false);
 
   // Scroll handler
-  const handleScroll = (direction:String) => {
-    if (scrollContainerRef.current) {
-      const { current } = scrollContainerRef;
-      const scrollAmount = current?.clientWidth; // Scroll by container width
+  // const handleScroll = (direction:String) => {
+  //   if (scrollContainerRef.current) {
+  //     const { current } = scrollContainerRef;
+  //     const scrollAmount = current?.clientWidth; // Scroll by container width
       
-      if (direction === 'left') {
-        current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      } else {
-        current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+  //     if (direction === 'left') {
+  //       current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  //     } else {
+  //       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  //     }
 
-      // Update scroll position state
-      setTimeout(() => {
-        setIsAtStart(current.scrollLeft <= 0);
-        setIsAtEnd(
-          current.scrollLeft + current.clientWidth >= current.scrollWidth - 10
-        );
-      }, 300);
-    }
-  };
+  //     // Update scroll position state
+  //     setTimeout(() => {
+  //       setIsAtStart(current.scrollLeft <= 0);
+  //       setIsAtEnd(
+  //         current.scrollLeft + current.clientWidth >= current.scrollWidth - 10
+  //       );
+  //     }, 300);
+  //   }
+  // };
 
   // Variants for staggered animations
   const containerVariants = {
@@ -104,7 +104,7 @@ export default function EventsSection() {
         <div className="relative  w-full">
           {/* Scroll buttons for mobile */}
           <div className=" md:hidden absolute z-10 top-1/2 transform -translate-y-1/2 w-full pointer-events-none">
-            {!isAtStart && (
+            {/* {!isAtStart && (
               <button 
                 onClick={() => handleScroll('left')}
                 className="absolute left-0 bg-black/50 rounded-full p-2 pointer-events-auto"
@@ -119,7 +119,7 @@ export default function EventsSection() {
               >
               R
               </button>
-            )}
+            )} */}
           </div>
 
           {/* Horizontal scrollable container */}
@@ -131,16 +131,16 @@ export default function EventsSection() {
               WebkitOverflowScrolling: 'touch'
             }}
           >
-            {events.slice(0, 4).map((event, index) => (
+            {events.slice(-4).map((event, index) => (
               <div 
                 key={index} 
                 className="snap-center flex-shrink-0 w-[80vw] max-w-[350px]"
               >
                 <EventCard 
-                  shortDescription={event.shortDescription} 
-                  eventName={event.eventName} 
-                  imgSrc={event.imgSrc} 
-                  type={event.type}
+                  shortDescription={event.oneline_description} 
+                  eventName={event.name} 
+                  imgSrc={`/events/${event.year}${event.img}`} 
+              
                 />
               </div>
             ))}
@@ -148,7 +148,8 @@ export default function EventsSection() {
 
           {/* Desktop grid layout */}
           <motion.div 
-            className="hidden md:flex gap-10 mt-12 items-center"
+            // className="hidden md:flex gap-10 mt-12 items-center "
+             className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -163,7 +164,7 @@ export default function EventsSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
           >
-            {events.slice(0, 4).map((event, index) => (
+            {events.slice(-4).map((event, index) => (
               <motion.div 
                 key={index} 
                 variants={{
@@ -182,10 +183,9 @@ export default function EventsSection() {
                 }}
               >
                 <EventCard 
-                  shortDescription={event.shortDescription} 
-                  eventName={event.eventName} 
-                  imgSrc={event.imgSrc} 
-                  type={event.type}
+                  shortDescription={event.oneline_description} 
+                  eventName={event.name} 
+                  imgSrc={`/events/${event.year}${event.img}`} 
                 />
               </motion.div>
             ))}

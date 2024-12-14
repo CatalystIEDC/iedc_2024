@@ -39,7 +39,7 @@ const NewsLetter = () => {
           {/* <span className="font-normal text-6xl">Catalyst IEDC</span> <br /> */}
         </div>
       
-        <EmailInput />
+        {/* <EmailInput /> */}
        
       </div>
     </div>

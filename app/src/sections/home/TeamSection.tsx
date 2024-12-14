@@ -67,7 +67,7 @@ const TeamSection = () => {
               className="text-lg md:text-2xl font-extralight tracking-normal mt-12"
               variants={itemVariants}
             >
-              Catalyst is <span className='text-underline font-normal'>more than just a club</span>; it's a dynamic ecosystem of innovation and entrepreneurship. Our team is a passionate group of young minds, driven by a shared vision of transforming ideas into reality. We believe that <span className='text-underline font-normal'>every engineer has the potential</span> to be an innovator, and our role is to foster that spirit.
+              Catalyst is <span className='text-underline font-normal'>more than just a team</span>; it's a dynamic ecosystem of innovation and entrepreneurship. Our team is a passionate group of young minds, driven by a shared vision of transforming ideas into reality. We believe that <span className='text-underline font-normal'>every engineer has the potential</span> to be an innovator, and our role is to foster that spirit.
             </motion.p>
 
             <motion.p 

@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link href={'/'}>
                 <Image src={Logo} alt='Catalyst Logo' width={45} height={45} className='object-cover md:scale-100 scale-75' />
             </Link>
-            <Image src={'./elements/Gradient.svg'} width={3000} height={300} alt='footer background' className='absolute -z-10 pointer-events-none top-0 left-0' />
+            <Image src={'/elements/Gradient.svg'} width={3000} height={300} alt='footer background' className='absolute -z-10 pointer-events-none top-0 left-0' />
             <div className='gap-12 hidden lg:flex'>
                 {
                     links.map((link, index) => {

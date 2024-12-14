@@ -33,25 +33,33 @@ const Footer = () => {
   const socials = [
     {
       page: "Instagram",
-      path: "/",
+      path: "https://www.instagram.com/catalystiedc/",
     },
     {
-      page: "Linkedin",
-      path: "/",
+      page: "LinkedIn",
+      path: "https://www.linkedin.com/company/catalyst---mar-baselios-iedc",
     },
+    {
+      page : 'Discord',
+      path : 'https://discord.com/invite/PMpm8WmtTx'
+    },
+    {
+      page: "YouTube",
+      path : "https://www.youtube.com/@CatalystMarBaseliosIEDC"
+    }
   ];
 
   return (
     <div className="relative">
       <div className="w-[95vw] mb-5 md:mb-10 rounded-lg mx-auto footer-gradient-2 overflow-hidden   gradient-border-top flex flex-col   text-white justify-center pt-12 pb-24 md:pb-40 gap-14   relative    px-5 md:px-20  ">
         <Image
-          src={"./elements/Gradient.svg"}
+          src={"/elements/Gradient.svg"}
           layout="fill"
           alt="footer background"
           className="absolute z-10 scale-125 md:scale-100  md:bottom-0 "
         ></Image>
         <Image
-          src={"./elements/Gradient.svg"}
+          src={"/elements/Gradient.svg"}
           layout="fill"
           alt="footer background"
           className="absolute top-0 scale-150 md:scale-100 md:bottom-0 -z-10 "
@@ -66,6 +74,7 @@ const Footer = () => {
                   return (
                     <div key={index} className="w-fit  group">
                       <Link
+                      
                         className="text-sm md:text-base font-light text-white"
                         href={link.path}
                       >
@@ -88,6 +97,7 @@ const Footer = () => {
                   return (
                     <div key={index} className="w-fit  group">
                       <Link
+                      target="_blank"
                         className="text-sm md:text-base font-light text-white"
                         href={link.path}
                       >
