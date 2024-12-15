@@ -129,7 +129,10 @@ const page = () => {
         </motion.div>
         <div className="flex items-center flex-wrap gap-5 lg:justify-between  w-full pr-12">
           {data.map((item, index) => (
-            <div key={index} className="cursor-pointer input-border p-6 min-h-52 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] h-56 relative overflow-hidden rounded-lg gap-4 shadow-lg">
+            <div
+              key={index}
+              className="cursor-pointer input-border p-6 min-h-52 min-w-80 flex flex-col size-full justify-between   max-w-xs bg-[#171F6126] h-56 relative overflow-hidden rounded-lg gap-4 shadow-lg"
+            >
               <h3 className=" text-white text-2xl font-normal mb-2">
                 {item.title}
               </h3>
@@ -151,9 +154,9 @@ const page = () => {
         >
           The collaboration between Catalyst IEDC and Mulearn significantly
           impacts students by equipping them with the skills necessary for
-          success in today&apos;s dynamic environment. Students emerge not only as
-          graduates but as proactive individuals ready to tackle challenges with
-          innovative solutions.
+          success in today&apos;s dynamic environment. Students emerge not only
+          as graduates but as proactive individuals ready to tackle challenges
+          with innovative solutions.
         </motion.p>
         <motion.p
           className="text-lg md:text-xl font-extralight tracking-normal"
@@ -195,62 +198,79 @@ const page = () => {
           className="text-lg md:text-xl font-normal tracking-normal"
           variants={itemVariants}
         >
-        <span className="font-semibold">Faculty Coordinator:</span> Mr. Arun J. S., AssistantProfessor, EC
+          <span className="font-semibold">Faculty Coordinator:</span> Mr. Arun
+          J. S., AssistantProfessor, ECE
+          <span className="font-semibold">Campus Lead:</span> Aditya S , ECE
         </motion.p>
         <motion.div
           className="text-lg mt-5 md:text-lg font-extralight flex flex-col items-start gap-3 tracking-normal"
           variants={itemVariants}
         >
           <div className="text-xl font-medium"> 1. Top Campus Award 2023</div>
-          <div>Mar Baselios College of Engineering and Technology proudly clinched the title of
-Top Campus 2023 in the Mulearn Annual Awards. This prestigious accolade is a
-testimony to the exceptional performance, securing an impressive 8 lakh Karma
-Points throughout the year by our students. This recognition is a statewide
-achievement, positioning the College at the forefront of academic and skilling
-excellence.</div>
+          <div>
+            Mar Baselios College of Engineering and Technology proudly clinched
+            the title of Top Campus 2023 in the Mulearn Annual Awards. This
+            prestigious accolade is a testimony to the exceptional performance,
+            securing an impressive 8 lakh Karma Points throughout the year by
+            our students. This recognition is a statewide achievement,
+            positioning the College at the forefront of academic and skilling
+            excellence.
+          </div>
         </motion.div>
         <Image
-        alt="Top Campus"
-        src={'/mulearn/mulearn3.png'}
-        width={200}
-        height={400}
-        className="object-cover items-center "
+          alt="Top Campus"
+          src={"/mulearn/mulearn3.png"}
+          width={200}
+          height={400}
+          className="object-cover items-center "
         />
         <motion.div
           className="text-lg mt-5 md:text-lg font-extralight flex flex-col items-start gap-3 tracking-normal"
           variants={itemVariants}
         >
-          <div className="text-xl font-medium"> 2. Team Codeify - Top Learning Circle in the State</div>
-          <div>In another remarkable achievement, Team Codeify has emerged as the Top
-Learning Circle in the State. Mr.Arun J. S., Assistant Professor, EC and Lead
-Enabler Mulearn MBCET, along with Student Team Members Aditya S, Amrithesh
-S, Ameer Ansary of S6 EC2, and Prajwal P P of S6 CS2, collectively amassed an
-impressive 25800 Karma points</div>
+          <div className="text-xl font-medium">
+            {" "}
+            2. Team Codeify - Top Learning Circle in the State
+          </div>
+          <div>
+            In another remarkable achievement, Team Codeify has emerged as the
+            Top Learning Circle in the State. Mr.Arun J. S., Assistant
+            Professor, EC and Lead Enabler Mulearn MBCET, along with Student
+            Team Members Aditya S, Amrithesh S, Ameer Ansary of S6 EC2, and
+            Prajwal P P of S6 CS2, collectively amassed an impressive 25800
+            Karma points
+          </div>
         </motion.div>
         <Image
-        alt="Top Campus"
-        src={'/mulearn/mulearn1.png'}
-        width={200}
-        height={400}
-        className="object-cover items-center "
+          alt="Top Campus"
+          src={"/mulearn/mulearn1.png"}
+          width={200}
+          height={400}
+          className="object-cover items-center "
         />
         <motion.div
           className="text-lg mt-5 md:text-lg font-extralight flex flex-col items-start gap-3 tracking-normal"
           variants={itemVariants}
         >
-          <div className="text-xl font-medium"> 3. MBCET Reaches 1 Million on Mulearn Leaderboard</div>
-          <div>Mar Baselios College of Engineering and Technology (MBCET) achieved a
-milestone on the Mulearn Campus Leaderboard, reaching 1 million karma points
-which was the second college in Kerala to do so after SJCET, Kottayam. This
-signifies excellence in education and research, due to active participation of
-MBCET Students in Mulearn&apos;s programs.</div>
+          <div className="text-xl font-medium">
+            {" "}
+            3. MBCET Reaches 1 Million on Mulearn Leaderboard
+          </div>
+          <div>
+            Mar Baselios College of Engineering and Technology (MBCET) achieved
+            a milestone on the Mulearn Campus Leaderboard, reaching 1 million
+            karma points which was the second college in Kerala to do so after
+            SJCET, Kottayam. This signifies excellence in education and
+            research, due to active participation of MBCET Students in
+            Mulearn&apos;s programs.
+          </div>
         </motion.div>
         <Image
-        alt="Top Campus"
-        src={'/mulearn/mulearn2.png'}
-        width={200}
-        height={400}
-        className="object-cover items-center "
+          alt="Top Campus"
+          src={"/mulearn/mulearn2.png"}
+          width={200}
+          height={400}
+          className="object-cover items-center "
         />
       </div>
     </motion.div>
