@@ -194,14 +194,14 @@ const page = () => {
           groups such as AI, Web Development, UI/UXdesign, Cyber Security, IoT,
           Blockchain,Entrepreneurship, Product Development, and more.
         </motion.p>
-        <motion.p
-          className="text-lg md:text-xl font-normal tracking-normal"
+        <motion.div
+          className="flex flex-col gap-3 items-start text-lg md:text-xl font-normal tracking-normal"
           variants={itemVariants}
         >
-          <span className="font-semibold">Faculty Coordinator:</span> Mr. Arun
+          <div className="font-semibold">Faculty Coordinator:</div> Mr. Arun
           J. S., AssistantProfessor, ECE
-          <span className="font-semibold">Campus Lead:</span> Aditya S , ECE
-        </motion.p>
+          <div className="font-semibold">Campus Lead:</div> Aditya S , ECE
+        </motion.div>
         <motion.div
           className="text-lg mt-5 md:text-lg font-extralight flex flex-col items-start gap-3 tracking-normal"
           variants={itemVariants}

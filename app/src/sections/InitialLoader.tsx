@@ -4,93 +4,128 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Logo from '@/public/logo/Headerlogo.svg'
+import { Darker_Grotesque } from 'next/font/google';
 
+const dg = Darker_Grotesque({ subsets: ['latin'] });
 const InitialLoader = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
-    // Disable scrolling
+    // Minimize DOM manipulation
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000); // Adjust time as needed
+      document.body.style.overflow = originalOverflow;
+    }, 800); // Reduced delay
 
     return () => {
       clearTimeout(timer);
+      document.body.style.overflow = originalOverflow;
     };
   }, []);
 
-  const handleAnimationStart = () => {
-    setIsAnimating(true);
-  };
 
-  const handleAnimationComplete = () => {
-    setIsAnimating(false);
-    // Re-enable scrolling only when both loading and animation are complete
-    if (!isLoading) {
-      document.body.style.overflow = 'unset';
-    }
-  };
+  useEffect(() => {
+    // Prevent scrolling when component mounts
+    const preventScroll = (e: Event) => {
+      e.preventDefault();
+    };
+
+    // Add event listeners to prevent scrolling
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    
+    // Prevent default scroll behaviors
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+
+    // Cleanup function to restore scrolling
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+    };
+  }, []);
 
   return (
     <motion.div
-      initial={{ y: 0 }}
-      animate={{
-      y: isLoading ? 0 : '-100%'
+      initial={{ opacity: 1 }}
+      animate={{ 
+        opacity: isLoading ? 1 : 0,
+        y: isLoading ? 0 : '-100%'
       }}
-      transition={{ duration: 1 }}
-      onAnimationStart={handleAnimationStart}
-      onAnimationComplete={handleAnimationComplete}
+      transition={{ 
+        duration: 0.6, // Faster transition
+        ease: 'easeInOut'
+      }}
       style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      height: '100%',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      background: '#000', // or any color you prefer
-      zIndex: 9999
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#000',
+        zIndex: 9999,
+        pointerEvents: isLoading ? 'auto' : 'none' // Disable interactions when not loading
       }}
-      className='w-screen relative'
+      className='relative w-screen h-screen overflow-hidden'
     >
-      <div className='flex flex-col justify-center items-center gap-5'>
-      <motion.div
-        initial={{ y: 20, scale: 1.2 }}
-        animate={{ y: 0, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
-      >
-        <Image src={Logo} alt='Catalyst Logo' width={100} height={100} className='object-cover'/>
-      </motion.div>
-      
-      <motion.h1
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-        style={{
-        color: '#fff',
-        fontSize: '3rem',
-        textAlign: 'center'
-        }}
-      >
-        Catalyst Mar Baselios IEDC
-      </motion.h1>
+      <div className='flex flex-col justify-center items-center gap-4'>
+        <motion.div
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ 
+            duration: 0.5, 
+            ease: 'easeOut',
+            delay: 0.1 
+          }}
+        >
+          {/* <Image 
+            src={Logo} 
+            alt='Catalyst Logo' 
+            width={80} 
+            height={80} 
+            priority
+            className='object-contain'
+          /> */}
+        </motion.div>
+        
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.5, 
+            ease: 'easeOut',
+            delay: 0.3 
+          }}
+        className={`text-white text-6xl font-semibold text-center ${dg.className}`}>
+        
+          Catalyst Mar Baselios IEDC
+        </motion.h1>
+
       </div>
-      <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.1 }}
-      transition={{ duration: 1 }}
-      style={{ position: 'absolute', width: '100%', height: '100%' }}
-      >
-      <Image
-        alt="bg-main"
-        src={'/bg-main.png'}
-        layout="fill"
-        className="z-[5] object-cover"
-      />
-      </motion.div>
+
+
+   <div className='absolute inset-0 -z-10 opacity-20'>
+        <Image
+          alt="bg-main"
+          src='/bg-main.png'
+          fill
+          sizes="100vw"
+          priority
+          quality={20} // Reduced image quality to decrease file size
+          className="object-cover"
+        />
+      </div>
     </motion.div>
   );
 };
