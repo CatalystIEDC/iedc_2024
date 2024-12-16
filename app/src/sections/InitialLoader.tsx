@@ -27,31 +27,31 @@ const InitialLoader = () => {
   }, []);
 
 
-  useEffect(() => {
-    // Prevent scrolling when component mounts
-    const preventScroll = (e: Event) => {
-      e.preventDefault();
-    };
+  // useEffect(() => {
+  //   // Prevent scrolling when component mounts
+  //   const preventScroll = (e: Event) => {
+  //     e.preventDefault();
+  //   };
 
-    // Add event listeners to prevent scrolling
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
+  //   // Add event listeners to prevent scrolling
+  //   document.body.style.overflow = 'hidden';
+  //   document.body.style.position = 'fixed';
+  //   document.body.style.width = '100%';
     
-    // Prevent default scroll behaviors
-    window.addEventListener('wheel', preventScroll, { passive: false });
-    window.addEventListener('touchmove', preventScroll, { passive: false });
+  //   // Prevent default scroll behaviors
+  //   window.addEventListener('wheel', preventScroll, { passive: false });
+  //   window.addEventListener('touchmove', preventScroll, { passive: false });
 
-    // Cleanup function to restore scrolling
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
+  //   // Cleanup function to restore scrolling
+  //   return () => {
+  //     document.body.style.overflow = '';
+  //     document.body.style.position = '';
+  //     document.body.style.width = '';
       
-      window.removeEventListener('wheel', preventScroll);
-      window.removeEventListener('touchmove', preventScroll);
-    };
-  }, []);
+  //     window.removeEventListener('wheel', preventScroll);
+  //     window.removeEventListener('touchmove', preventScroll);
+  //   };
+  // }, []);
 
   return (
     <motion.div
